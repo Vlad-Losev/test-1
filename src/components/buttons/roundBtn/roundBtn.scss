@@ -1,0 +1,197 @@
+.um-roundBtn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid;
+  overflow: hidden;
+  cursor: pointer;
+
+  & svg,
+  & img {
+      object-fit: contain;
+  }
+
+  // Sizes
+  &--s {
+      width: 60px;
+
+      @media (max-width: 1023px) {
+          width: 50px;
+      }
+
+      & svg {
+          width: 40px;
+          height: 40px;
+
+          @media (max-width: 1023px) {
+              width: 33px;
+              height: 33px;
+          }
+      }
+  }
+  &--m {
+      width: 70px;
+
+      @media (max-width: 1023px) {
+          width: 60px;
+          height: 60px;
+      }
+
+      & svg,
+      & img {
+          width: 24px;
+          height: 24px;
+
+          @media (max-width: 1023px) {
+              width: 21px;
+              height: 21px;
+          }
+      }
+  }
+  &--l {
+      width: 140px;
+
+      @media (max-width: 1023px) {
+          width: 80px;
+      }
+
+      & svg,
+      & img {
+          width: 60px;
+          height: 60px;
+
+          @media (max-width: 1023px) {
+              width: 34px;
+              height: 34px;
+          }
+      }
+  }
+
+  // Colors
+  &--primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+
+      & svg {
+          fill: var(--white-color);
+      }
+
+      &:active {
+          background-color: var(--white-color);
+
+          & svg {
+              fill: var(--primary-color);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              background-color: var(--white-color);
+
+              & svg {
+                  fill: var(--primary-color);
+              }
+          }
+      }
+  }
+  &--primary-invert {
+      background-color: var(--white-color);
+      border-color: var(--primary-color);
+
+      & svg {
+          fill: var(--primary-color);
+      }
+
+      &:active {
+          background-color: var(--primary-color);
+
+          & svg {
+              fill: var(--white-color);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              background-color: var(--primary-color);
+
+              & svg {
+                  fill: var(--white-color);
+              }
+          }
+      }
+  }
+  &--transparent-primary {
+      background-color: transparent;
+      border-color: var(--primary-color);
+
+      & svg {
+          fill: var(--primary-color);
+      }
+
+      &:active {
+          background-color: var(--primary-color);
+
+          & svg {
+              fill: var(--white-color);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              background-color: var(--primary-color);
+
+              & svg {
+                  fill: var(--white-color);
+              }
+          }
+      }
+  }
+  &--white {
+      background-color: var(--white-color);
+      border-color: var(--white-color);
+
+      & svg {
+          fill: var(--primary-color);
+      }
+
+      &:active {
+          background-color: var(--primary-color);
+          border-color: var(--primary-color);
+
+          & svg {
+              fill: var(--white-color);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              background-color: var(--primary-color);
+              border-color: var(--primary-color);
+
+              & svg {
+                  fill: var(--white-color);
+              }
+          }
+      }
+  }
+
+  &:disabled {
+      pointer-events: none;
+      opacity: .7;
+  }
+
+  @media (hover: hover) {
+      
+      &,
+      & svg {
+          transition: var(--defaultTransition);
+      }
+  }
+}

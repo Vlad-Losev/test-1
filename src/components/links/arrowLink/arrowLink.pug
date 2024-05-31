@@ -1,0 +1,34 @@
+//- block: html
+//- style: 'prev' | 'next'
+
+mixin arrowLink(style = 'next')
+    - var tag = attributes.href ? 'a' : 'div'
+
+    #{tag}(
+        class='um-arrowLink um-arrowLink--'+style
+        class!=attributes.class
+        href!=attributes.href)
+        if style == 'prev'
+            +svg('arrow')
+        if block
+            block
+        else
+            | Ссылка
+        if style == 'next'
+            +svg('arrow')
+
+//- mixin arrowLink(style = 'next')
+//-     - var tag = attributes.href ? 'a' : 'div'
+
+//-     #{tag}(
+//-         class='um-arrowLink um-arrowLink--'+style
+//-         class!=attributes.class
+//-         href!=attributes.href)
+//-         if style == 'prev'
+//-             +svg('arrow-s')
+//-         if block
+//-             block
+//-         else
+//-             | Ссылка
+//-         if style == 'next'
+//-             +svg('arrow-s')

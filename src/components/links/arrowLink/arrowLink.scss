@@ -1,0 +1,85 @@
+.um-arrowLink {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+//   line-height: inherit; 
+  line-height: 28.8px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  color: var(--blue-color);
+  background: none;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+    line-height: 25.6px;
+    gap: 4px;
+  }
+
+  & svg {
+      margin-top: 4px;
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      flex-shrink: 0;
+      fill: var(--blue-color);
+  }
+
+  &--prev {
+      padding-left: 5px;
+      
+      & svg {
+          transform: rotate(90deg);
+      }
+
+      &:active {
+          
+          & svg {
+              transform: rotate(90deg) translateY(5px);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+
+              & svg {
+                  transform: rotate(90deg) translateY(5px);
+              }
+          }
+      }
+  }
+  &--next {
+      padding-right: 5px;
+
+      & svg {
+          transform: rotate(-180deg);
+      }
+
+      &:active {
+          
+          & svg {
+              transform: rotate(-180deg) translateX(-5px);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              
+              & svg {
+                  transform: rotate(-180deg) translateX(-5px);
+              }
+          }
+      }
+  }
+
+  @media (hover: hover) {
+      
+      & svg {
+          transition: var(--defaultTransition);
+      }
+  }
+}

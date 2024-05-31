@@ -1,0 +1,10 @@
+mixin text(title="Заголовок")
+    .um-text
+        .um-text__content
+            .um-text__title
+                +subtitle('1')=title
+            +content.um-text__description
+                if block
+                    block
+                else
+                    | Описание

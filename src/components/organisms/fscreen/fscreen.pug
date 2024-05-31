@@ -1,0 +1,33 @@
+mixin fscreen(title, btnText, number, numberMob, picture)
+    .um-fscreen.js-fscreen
+        .um-fscreen__wrapper
+            .um-fscreen__inner.um-container.js-fscreen__scrollContainer
+                .um-fscreen__container
+                    +breadcrumbs
+                    .um-fscreen__content
+                        .um-fscreen__top
+                            .um-fscreen__title
+                                +title('2')=title
+                            .um-fscreen__desc
+                                if block
+                                    block
+                                else
+                                    | Описание
+                        .um-fscreen__btns
+                            +btn('primary')(href!=attributes.href).um-fscreen__btn=btnText
+                            .um-fscreen__download
+                                a(href="#").um-fscreen__text Скачать буклет
+                                .um-fscreen__icon
+                                    +svg('download')
+                    .um-fscreen__step
+                        img(src=number).um-fscreen__number.isHiddenMob
+                        img(src=numberMob).um-fscreen__number.isHiddenDesc.isHiddenTab
+                        .um-fscreen__line
+                img(src=picture, alt=title loading="lazy").um-fscreen__picture.isHiddenDesc
+            canvas.um-fscreen__sequence.js-fscreen__canvas.isHiddenTab.isHiddenMob
+            .um-pageLines
+                div 
+                div 
+                div 
+                div 
+                div 

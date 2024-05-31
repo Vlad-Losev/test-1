@@ -1,0 +1,218 @@
+.um-popup {
+  position: fixed;
+  width: calc(100% - 30px);
+  max-height: 100vh;
+  bottom: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,50%);
+  z-index: 250;
+  pointer-events: none;
+  transition: var(--defaultTransition);
+  background: var(--white-color);
+  overflow-y: auto;
+  scrollbar-width: 0px;
+
+  &.isVisible {
+      opacity: 1;
+      transform: translate(-50%,50%);
+      pointer-events: all;
+  }
+
+  &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+  &__title, &__desc {
+      text-align: center;
+      margin: 0 auto;
+  }
+  &__title {
+      text-align: center;
+  }
+  &__title-thanks {
+      margin-top: 20px;
+      text-align: center;
+
+      @media (max-width: 767px) {
+          margin-top: 10px;
+      }
+  }
+  &__desc {
+      margin-top: 10px;
+
+      @media (max-width: 767px) {
+          margin-top: 5px;
+      }
+  }
+
+  &__form {
+      width: 100%;
+      margin-top: 30px;
+      text-align: left;
+
+      @media (max-width: 1023px) {
+          margin-top: 25px;
+      }
+  }
+
+  &__agreement {
+      margin-top: 15px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--basic-color);
+      text-align: center;
+
+      @media (max-width: 1023px) {
+          margin-top: 10px;
+          font-size: 13px;
+      }
+
+      & a {
+          transition: var(--defaultTransition);
+          color: var(--primary-color);
+
+          &:hover {
+              color: var(--basic-color);
+          }
+      }
+  }
+
+  &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      &::after,
+      &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: var(--basic-color);
+          pointer-events: none;
+          transition: all 0.2s ease-in-out;
+      }
+
+      &::after {
+          transform: rotate(45deg);
+
+      }
+
+      &::before {
+          transform: rotate(-45deg);
+      }
+
+      &:hover {
+
+          &::after,
+          &::before {
+              background-color: var(--primary-color);
+          }
+      }
+
+      @media (max-width: 1023px) {
+          width: 25px;
+          height: 25px;
+      }
+  }
+  &__icon {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+  &__icon-inner {
+      width: 150px;
+      height: 150px;
+
+      & svg {
+          width: 100%;
+          height: 100%;
+      }
+
+      @media (max-width: 1023px) {
+          width: 100px;
+          height: 100px;
+      }
+  }
+
+  &__description {
+      margin-top: 10px;
+
+      @media (max-width: 1023px) {
+          margin-top: 5px;
+      }
+  }
+
+  &__btn {
+      display: flex;
+      margin: 35px auto 0;
+      max-width: 210px;
+      width: 100%;
+
+      @media (max-width: 1023px) {
+          margin-top: 25px;
+          max-width: 170px;
+      }
+  }
+
+  &__error {
+      display: none;
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 155%;
+      color: #D12020;
+  }
+  &.isError &__input input {
+      border-color: #D12020;
+  }
+  &.isError &__error {
+      display: block;
+  }
+
+  &--m {
+      max-width: 540px;
+      padding: 50px 70px 60px;
+      //max-height: 805px;
+
+      @media (max-width: 767px) {
+          padding: 35px 30px 45px;
+      }
+  }
+
+  &--s {
+      max-width: 450px;
+      max-height: 530px;
+      padding: 75px 70px 100px;
+
+      @media (max-width: 1023px) {
+          padding: 55px;
+      }
+      @media (max-width: 767px) {
+          max-width: 260px;
+          max-height: 361px;
+          padding: 35px 45px 50px;
+      }
+  }
+  &--s &__description {
+      text-align: center;
+      max-width: 400px;
+  }
+
+
+}

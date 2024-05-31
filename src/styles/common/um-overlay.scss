@@ -1,0 +1,25 @@
+.um-overlay {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--defaultTransition);
+
+  &--transparent {
+      z-index: 95;
+      opacity: 0;
+      pointer-events: none;
+      background: rgba(31, 36, 41, 0.4);
+      //background: transparent;
+  }
+
+  &.isVisible {
+      opacity: 1;
+      pointer-events: all;
+  }
+}

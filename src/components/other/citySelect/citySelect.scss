@@ -1,0 +1,132 @@
+.um-citySelect {
+  position: relative;
+  display: inline-block;
+
+  @media (min-width: 1281px) {
+      
+      &:hover &__btn svg {
+          fill: var(--primary-color);
+          transform: scaleY(-1);
+      }
+      &:hover &__window {
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(0);
+      }
+  }
+  @media (max-width: 1280px) {
+      
+      &.isActive &__btn svg {
+          fill: var(--primary-color);
+      }
+      &.isActive &__window {
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(0);
+      }
+  }
+
+  &__btn img,
+  &__item img {
+      width: 26px;
+      height: 20px;
+      object-fit: contain;
+      //border: 1px solid var(--grey-light-color);
+      outline: 1px solid var(--grey-light-color);
+  }
+
+  &__btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      background: none;
+      z-index: 5;
+
+      & img,
+      & svg {
+          object-fit: contain;
+      }
+
+      & svg {
+          width: 20px;
+          height: 20px;
+          fill: var(--grey-color);
+          transition: var(--defaultTransition);
+
+          @media (max-width: 1280px) {
+              transform: rotate(-90deg);
+          }
+      }
+  }
+
+  &__window {
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      padding-top: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-40px);
+      transition: var(--defaultTransition);
+      z-index: 4;
+
+      @media (max-width: 1280px) {
+          top: unset;
+          left: 40px;
+          bottom: calc(100% + 10px);
+      }
+  }
+
+  &__items {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.10);
+      background: var(--white-color);
+  }
+
+  &__item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px;
+      margin: -1px 0;
+      border: 1px solid var(--grey-light-color);
+      background-color: var(--white-color);
+      cursor: pointer;
+
+      & span {
+          font-size: 14px;
+          line-height: 150%;
+
+          @media (max-width: 1280px) {
+              font-size: 13px;
+              font-weight: 400;   
+          }
+      }
+
+
+
+      &.isActive {
+          pointer-events: none;
+
+          span {
+              color: var(--primary-color);
+          }
+      }
+
+      &:active,
+      &.isActive {
+          background-color: var(--grey-lighter-color);
+      }
+
+      @media (hover: hover) {
+          transition: var(--defaultTransition);
+          
+          &:hover {
+              background-color: var(--grey-lighter-color);
+          }
+      }
+  }
+}

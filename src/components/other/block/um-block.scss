@@ -1,0 +1,60 @@
+.um-block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @media (max-width: 1023px) {
+    gap: 30px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media (max-width: 1023px) {
+      max-width: none;
+      gap: 15px;
+    }
+
+    & span {
+      max-width: 800px;
+      width: 100%;
+
+      @media (max-width: 1023px) {
+        max-width: none;
+      }
+    }
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+
+    .um-title {
+      max-width: 840px;
+      width: max-content;
+
+      @media (max-width: 1023px) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__link-bottom {
+    margin-top: 25px;
+
+    &--mt {
+      padding: 0 15px;
+    }
+  }
+  &__btn-bottom {
+    margin-top: 30px;
+
+    .um-btn {
+      width: 100%;
+    }
+  }
+}

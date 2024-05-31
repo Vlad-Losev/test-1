@@ -1,0 +1,133 @@
+extends ../common/layout
+
+block append head
+  link(href="/styles/test.page.min.css" rel="stylesheet")
+  //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+
+block append scripts
+  script(src="/scripts/test.page.min.js")
+  //- script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", defer) 
+
+
+block content 
+  main.p-test
+    section.bixik
+
+    section.um-hero
+      .um-container
+        .um-hero__grid 
+          .um-hero__box.um-hero__box_1 
+            +title('2') Уральская<br>Металлообраба<span>-</span>тывающая<br>Компания   
+
+            p.um-hero__text Производим металлопродукцию с 2006 года на российском и европейском рынке.
+
+          .um-hero__box.um-hero__box_2 
+            .um-hero__box_2__wrapper 
+              .um-hero__text Мы – одна из <span>лучших</span><span>крупнейших</span> металлообрабатывающих компаний, производящая широкий спектр продуктов.
+
+              +arrowLink('next')(href="#") Спецпредложения
+
+          .um-hero__box.um-hero__box_3
+            ul.um-hero__list 
+              li.um-hero__item 
+                .um-hero__item__text 1 000 позиций в наличии
+
+                +arrowLink('next')(href="#") Каталог
+
+              li.um-hero__item 
+                .um-hero__item__text 1,5 млн т продукции продано
+
+                +arrowLink('next')(href="#") Поставщикам
+
+              li.um-hero__item 
+                .um-hero__item__text 10 000 раз оказано услуг
+
+                +arrowLink('next')(href="#") Сервис
+
+          .um-hero__box.um-hero__box_4 
+            img.um-hero__img-1(src="../../img/hero-img-1.webp", alt="металлические изделия")
+
+            .um-swiper-2.swiper
+              .um-swiper-2__wrapper.swiper-wrapper 
+                .um-swiper-2__slide.swiper-slide(data-swiper-autoplay="1000")
+                  .um-swiper-2__wrapper-slide  
+                    img.um-hero__img-2(src="../../img/hero-img-2.webp", alt="металлические изделия")
+
+                .um-swiper-2__slide.swiper-slide
+                  .um-swiper-2__wrapper-slide  
+                    img.um-hero__img-2(src="../../img/hero-img-2.webp", alt="металлические изделия")
+
+                .um-swiper-2__slide.swiper-slide
+                  .um-swiper-2__wrapper-slide  
+                    img.um-hero__img-2(src="../../img/hero-img-2.webp", alt="металлические изделия")
+
+
+    section.um-news
+      .um-container
+        .um-news__flex
+          +title('6') Последние новости
+          +arrowLink('next')(href="#") Все новости
+
+        .um-swiper.swiper
+          .um-swiper__wrapper.swiper-wrapper 
+            .um-swiper__slide.swiper-slide
+              .um-swiper__wrapper-slide
+                img(src="../../img/swiper-img-1.webp", alt="мероприятие")
+
+                .um-swiper__date 13 ноября 2023 года
+
+                +subtitle('3') «УМК» на 29-ой выставке Металл-Экспо
+
+                p.um-swiper__text «Уральская Металлообрабатывающая Компания» приняла участие в 29-ой Международной промышленной выставке «Металл-Экспо», которая...
+                 
+            .um-swiper__slide.swiper-slide
+              .um-swiper__wrapper-slide
+                img(src="../../img/swiper-img-2.webp", alt="выставка")
+
+                .um-swiper__date 06 декабря 2023 года
+
+                +subtitle('3') «УМК» приняла участие в METAL EXPO 2023
+
+                p.um-swiper__text ООО «УМК» приняла участие в 5-ой международной выставке технологий производства чугуна, стали и металлопродукции METAL EXPO 2023, которая...
+
+            .um-swiper__slide.swiper-slide
+              .um-swiper__wrapper-slide
+                img(src="../../img/swiper-img-3.webp", alt="премия")
+
+                .um-swiper__date 05 октября 2023 года
+
+                +subtitle('3') ООО «УМК» заняла 3 место в "Экспортере года 2023"
+
+                p.um-swiper__text ООО «Уральская Металлообрабатывающая Компания» заняла призовое место во Всероссийской премии в области международной кооперации...
+
+          +sliderPagination()
+
+          .um-swiper__button-prev.swiper-button-prev
+          .um-swiper__button-next.swiper-button-next  
+
+    section.um-connection 
+      .um-container
+        .um-connection__flex 
+          .um-connection__box
+            +title('6') Появились вопросы? Свяжитесь с нами
+
+            p.um-connection__text Мы ответим на все ваши вопросы о производстве и переработке металлопроката, а также его свойствах и особенностях применения. Проведем подробную консультацию по имеющимся товарам.
+
+          .um-connection__box
+            form.um-connection__form(action="https://jsonplaceholder.typicode.com/posts", method="post")
+              input.um-connection__input-data(type="text", placeholder='Ваше имя*', required) 
+
+              input.um-connection__input-data(type="text", placeholder='Компания') 
+
+              input.um-connection__input-data(type="email", placeholder='E-mail*', required) 
+
+              input.um-connection__input-data(type="text", placeholder='Телефон') 
+
+              button.um-connection__submit(type="submit") Отправить
+
+              label.um-connection__checkbox-label(for="checkbox")
+                input.um-connection__checkbox#checkbox(type="checkbox")
+                span.um-connection__checkbox-view 
+                  svg.um-connection__checkbox-icon(xmlns="http://www.w3.org/2000/svg", width="18", viewBox="0 0 511.985 511.985")
+                    path(fill="#fff", d="M500.088 83.681c-15.841-15.862-41.564-15.852-57.426 0L184.205 342.148 69.332 227.276c-15.862-15.862-41.574-15.862-57.436 0-15.862 15.862-15.862 41.574 0 57.436l143.585 143.585c7.926 7.926 18.319 11.899 28.713 11.899 10.394 0 20.797-3.963 28.723-11.899l287.171-287.181c15.862-15.851 15.862-41.574 0-57.435z")
+                .um-connection__checkbox-label__text Подтверждаю корректность введенных данных и даю согласие на обработку моих персональных данных

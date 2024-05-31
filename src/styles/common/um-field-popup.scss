@@ -1,0 +1,18 @@
+.um-field-popup {
+  &__error {
+      display: none;
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 155%;
+      color: #D12020;
+  }
+  &.isError &__input input {
+      border-color: #D12020;
+  }
+  &.isError &__error {
+      display: block;
+  }
+}

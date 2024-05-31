@@ -1,0 +1,34 @@
+:root {
+  --appHeight: 100vh;
+  --containerWidth: 1200px;
+  --headerHeight: 150px;
+  --footerIndent: 130px;
+
+  // --mainFont: 'SST';
+  --mainFont: 'Myriad Pro';
+  --additionalFont: 'SST Condensed';
+
+  --basicTextSize: 16px;
+  // --basicLineHeight: 160%;
+  --basicLineHeight: 24px;
+
+  --scrollbarBg: #fff;
+  --scrollbarThumb: var(--primary-color);
+  --scrollbarWidth: 7px;
+  --scrollbarBorder: none;
+  --scrollbarBorderRadius: 0;
+
+  --defaultTransition: all 0.3s ease-in-out;
+
+  @media (max-width: 1280px) {
+      --headerHeight: 60px;
+  }
+  @media (max-width: 1023px) {
+      --basicTextSize: 15px;
+      --basicLineHeight: 150%;
+      --footerIndent: 50px;
+  }
+  @media (max-width: 767px) {
+
+  }
+}

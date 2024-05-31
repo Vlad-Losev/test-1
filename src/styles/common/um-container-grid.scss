@@ -1,0 +1,8 @@
+.um-container-grid {
+  display: grid;
+  grid-template-columns: 30px 1fr minmax(auto,var(--containerWidth)) 1fr 30px;
+
+  @media (max-width: 1023px) {
+      grid-template-columns: 15px 1fr minmax(auto,var(--containerWidth)) 1fr 15px;
+  }
+}

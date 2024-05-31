@@ -1,0 +1,6 @@
+mixin content()
+    .um-content(class!=attributes.class)
+        if block
+            block
+        else
+            | Контент

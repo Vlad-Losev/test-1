@@ -1,0 +1,129 @@
+@import '../../../../node_modules/plyr/src/sass/plyr.scss';
+
+:root {
+    --plyr-color-main: var(--primary-color);
+}
+
+.plyr {
+    &--stopped &__controls {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    & button {
+        transition: var(--defaultTransition)!important;
+    }
+
+    &__control {
+
+
+
+
+        &--overlaid {
+            padding: 31px;
+            opacity: 1!important;
+            border: 1px solid transparent !important;
+            transition: var(--defaultTransition);
+
+
+
+            @media(hover: hover) {
+                & svg {
+                    transition: var(--defaultTransition);
+                }
+
+                &:hover {
+                    background: var(--white-color) !important;
+                    border: 1px solid var(--primary-color) !important;
+
+                    & svg {
+                        fill: var(--primary-color) !important;
+                    }
+                }
+            }
+
+
+            @media (max-width: 1023px) {
+                padding: 25px;
+            }
+
+            & svg {
+                width: 38px;
+                height: 38px;
+
+                @media (max-width: 1023px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        &--pressed {
+            //transition: none;
+            transition: var(--defaultTransition);
+            opacity: 0;
+
+            & svg {
+                //transition: none;
+                transition: var(--defaultTransition);
+                opacity: 0;
+            }
+        }
+
+    }
+    &__video-wrapper,
+    &__poster {
+        background-color: var(--basic-color);
+    }
+}
+
+.um-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 45/27;
+    
+    & > iframe,
+    & > .plyr,
+    & > video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &--large {
+        aspect-ratio: 241/135;
+
+        .plyr {
+            .plyr__control--overlaid {
+                padding: calc(var(--plyr-control-spacing, 10px) * 4.5);
+
+
+                @media(max-width: 1023px) {
+                    padding: calc(var(--plyr-control-spacing, 10px) * 2.5);
+                }
+            }
+
+            .plyr__control--overlaid svg {
+                left: 2px;
+                position: relative;
+                height: var(--plyr-control-icon-size, 50px) !important;
+                width: var(--plyr-control-icon-size, 50px) !important;
+                //transition: var(--defaultTransition) !important;
+                //fill: var(--white-color)!important;
+
+                @media(max-width: 1023px) {
+                    height: var(--plyr-control-icon-size, 30px) !important;
+                    width: var(--plyr-control-icon-size, 30px) !important;
+                }
+            }
+
+            .plyr__control {
+                .plyr__control--overlaid {
+                    & svg {
+                        fill: white !important;
+                    }
+                }
+            }
+        }
+
+    }
+}

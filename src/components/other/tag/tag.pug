@@ -1,0 +1,10 @@
+//- block: html
+//- style: 'primary' | 'transparent-white' | 'transparent-primary'
+mixin tag(style = 'primary')
+    - var tag = attributes.href ? 'a' : 'button'
+
+    #{tag}(class='um-tag' class!=attributes.class onclick!=attributes.onclick disabled!=attributes.disabled href!=attributes.href)
+        if block
+            block
+        else
+            | Тэг

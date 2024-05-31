@@ -1,0 +1,8 @@
+mixin videoPopup()
+    .um-overlay.js-overlay
+    .um-video-popup.js-popup(data-popup-id="video")
+        .um-video-popup__video(id="video-iframe")
+            //+video
+            <iframe loading="lazy" width="100%" height="100%" src="https://rutube.ru/play/embed/894235a40986557004a47bc200672bf5" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        .um-video-popup__close.js-popup__close
+            +svg('close-l')

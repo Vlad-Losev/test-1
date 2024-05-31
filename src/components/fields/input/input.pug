@@ -1,0 +1,6 @@
+mixin input(label="Поле")
+    .um-input.js-input(class!=attributes.class)
+        .um-input__input
+            .um-input__label=label
+            input(type="text" name!=attributes.name value!=attributes.value).js-input__input
+        .um-input__error.js-input__error Текст ошибки

@@ -1,0 +1,97 @@
+.um-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__input {
+      position: relative;
+
+      & input,
+      & textarea {
+          width: 100%;
+          height: 75px;
+          padding: 36px 20px 13px;
+          border: 1px solid var(--grey-light-color);
+          border-radius: 0;
+          font-size: inherit;
+          line-height: inherit;
+          color: var(--basic-color);
+          transition: var(--defaultTransition);
+
+          @media (max-width: 1023px) {
+              padding: 28px 20px 9px;
+              height: 60px;
+          }
+          @media (max-width: 767px) {
+
+          }
+
+          &:focus,
+          &:hover {
+              border-color: var(--primary-color);
+          }
+          &::placeholder {
+              color: var(--grey-color);
+          }
+      }
+      & textarea {
+          max-height: 127px;
+          height: auto;
+          vertical-align: bottom;
+          //padding: 21px 20px 28px;
+
+          @media (max-width: 1023px) {
+              //padding: 16px 20px 21px;
+              height: 106px;
+          }
+      }
+  }
+
+  &__label {
+      position: absolute;
+      top: 14px;
+      left: 21px;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--grey-color);
+      transition: var(--defaultTransition);
+      pointer-events: none;
+      will-change: top, font-size;
+
+      @media (max-width: 1023px) {
+          top: 7px;
+          font-size: 13px;
+          line-height: 150%;
+      }
+  }
+
+  &__error {
+      display: none;
+      font-size: 14px;
+      line-height: 145%;
+      color: red;
+
+      @media (max-width: 1023px) {
+          font-size: 13px;
+          line-height: 150%;
+      }
+  }
+
+  &.isError &__input input {
+      border-color: red;
+  }
+  &.isError &__error {
+      display: block;
+  }
+
+  &.isEmpty &__label {
+      top: 22px;
+      font-size: inherit;
+      line-height: inherit;
+
+      @media (max-width: 1023px) {
+          top: 17px;
+      }
+  }
+}

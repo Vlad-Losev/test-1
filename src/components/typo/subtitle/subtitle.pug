@@ -1,0 +1,8 @@
+//- size: '1' | '2'
+//- block: html
+mixin subtitle(size = '1')
+    .um-subtitle(class="um-subtitle--"+size class!=attributes.class)
+        if block 
+            block 
+        else 
+            | Заголовок

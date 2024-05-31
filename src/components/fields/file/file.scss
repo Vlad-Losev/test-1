@@ -1,0 +1,131 @@
+.um-file {
+  // display: flex;
+  // flex-direction: column;
+  // gap: 15px;
+  color: var(--primary-color);
+
+  & input {
+      display: none;
+  }
+
+  &__button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: none;
+      color: var(--basic-color);
+
+      @media (max-width: 767px) {
+          max-width: 100%;
+      }
+
+      & + .um-file__capture {
+          margin-top: 10px;
+
+          @media (max-width: 767px) {
+              margin-top: 8px;
+          }
+      }
+
+      & svg {
+          width: 25px;
+          height: 25px;
+          fill: var(--primary-color);
+      }
+
+      & span {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+      }
+
+      &:active {
+          color: var(--primary-color);
+
+          & svg {
+              fill: var(--primary-color);
+          }
+      }
+
+      @media (hover: hover) {
+
+          &,
+          & svg {
+              transition: var(--defaultTransition);
+          }
+
+          &:hover {
+              color: var(--primary-color);
+
+              //& svg {
+              //    fill: var(--primary-color);
+              //}
+          }
+      }
+  }
+
+  // &__items {
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: 5px;
+  // }
+
+  &__error {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 145%;
+      color: var(--primary-color);
+  }
+
+  &__capture {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+
+      &-name {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          color: var(--basic-color);
+      }
+
+      &-delete {
+          margin-top: 3px;
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+          background: none;
+
+          & svg {
+              fill: var(--basic-color);
+              width: 100%;
+              height: 100%;
+          }
+
+          &:active {
+
+              & svg {
+                  fill: var(--primary-color);
+              }
+          }
+
+          @media (hover: hover) {
+
+              & svg {
+                  transition: var(--defaultTransition);
+              }
+
+              &:hover {
+
+                  & svg {
+                      fill: var(--primary-color);
+                  }
+              }
+          }
+      }
+  }
+}

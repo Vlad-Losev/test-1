@@ -1,0 +1,8 @@
+//- block: html
+//- style: 'primary' | 'black' | 'grey' | 'white'
+mixin link(style = 'black')
+    a(class='um-link um-link--'+style)&attributes(attributes)
+        if block
+            block
+        else
+            | Ссылка

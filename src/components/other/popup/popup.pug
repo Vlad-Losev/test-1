@@ -1,0 +1,28 @@
+mixin popup()
+    .um-overlay.js-overlay
+    .um-popup.um-popup--m.js-popup(data-popup-id="callback")
+        .um-popup__close.js-popup__close
+        +subtitle('1').um-popup__title Заказать звонок
+        .um-popup__desc Оставьте контактные данные и наш менеджер свяжется с вами в ближайшее время.
+        .um-form-popup.um-popup__form
+            .um-form-popup__fields
+                +input("Имя")(type="text", name='name')
+                +input(type="text", name="phone").js-mask-phone
+                +input(type="text", name="phone")
+                +textarea("Комментарий")(name="comment")
+            .um-form-popup__file
+                +file
+            +btn(onclick="umGlobal.togglePopup('callback', false, false);umGlobal.togglePopup('thanks', true);").um-form-popup__btn Отправить
+        p.um-popup__agreement Нажимая на кнопку «Отправить», я соглашаюсь&nbsp;
+            a(href="/privacy/") с политикой персональных данных.
+
+    .um-popup.um-popup--s.js-popup(data-popup-id="thanks")
+        .um-popup__icon
+            .um-popup__icon-inner
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                <path d="M12.5 52.4999C12.4984 43.4395 16.1399 34.759 22.6051 28.4114C29.0703 22.0637 37.8162 18.5822 46.875 18.7499C57.6083 18.6929 67.8499 23.2448 75 31.2499C82.1501 23.2448 92.3917 18.6929 103.125 18.7499C112.184 18.5822 120.93 22.0637 127.395 28.4114C133.86 34.759 137.502 43.4395 137.5 52.4999C137.5 85.9749 97.6313 111.25 75 131.25C52.4188 111.081 12.5 85.9999 12.5 52.4999Z" fill="#DCE4EA"/>
+                </svg>
+        span.um-popup__close.js-popup__close
+        +subtitle("1").um-popup__title-thanks Спасибо!
+        .um-popup__description Ваша заявка успешно отправлена
+        +btn.um-popup__btn На главную

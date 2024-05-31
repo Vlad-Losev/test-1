@@ -1,0 +1,8 @@
+//- size: '1' | '2' | '3' | '4' | '5'
+//- block: html
+mixin title(size = '1')
+    .um-title(class="um-title--"+size class!=attributes.class)
+        if block 
+            block 
+        else 
+            | Заголовок

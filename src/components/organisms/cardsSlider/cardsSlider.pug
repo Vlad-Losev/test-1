@@ -1,0 +1,14 @@
+mixin cardsSlider()
+    .um-cardsSlider
+        .um-cardsSlider__slider.js-cards-slider
+            .swiper-wrapper
+                if block
+                    block
+                    
+            .um-cardsSlider__pagination.um-pagination.isHiddenMob
+                +roundBtn.js-cards-slider__prev
+                    +svg('arrow')
+                +roundBtn.js-cards-slider__next
+                    +svg('arrow')
+        .um-cardsSlider__btn.isHiddenTab.isHiddenDesc
+            +btn('transparent-primary') Ссылка

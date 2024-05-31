@@ -1,0 +1,16 @@
+//- block: svg | img
+//- style: 'primary' | 'invert'
+//- size: 'm' | 's'
+mixin socialLink(style = 'primary')
+    a(
+        class='um-socialLink' 
+        class!='um-socialLink--'+style 
+        class!=attributes.class 
+        onclick!=attributes.onclick 
+        disabled!=attributes.disabled 
+        href!=attributes.href 
+        style!=attributes.style)
+        if block
+            block
+        else
+            +svg('arrow')

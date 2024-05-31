@@ -1,0 +1,11 @@
+mixin citySelect 
+    .um-citySelect.js-citySelect
+        button.um-citySelect__btn.js-citySelect__openBtn
+            img(src="/img/flag-ru.svg", alt="ru")
+            +svg('arrow-s')
+        .um-citySelect__window
+            .um-citySelect__items 
+                each lang in ['ru', 'en', 'de', 'fr', 'es', 'kz', 'uz', 'kg']
+                    a.um-citySelect__item(class=(lang == 'ru' ? 'isActive' : '') href="#")
+                        img(src="/img/flag-"+lang+".svg", alt=lang)
+                        span=lang

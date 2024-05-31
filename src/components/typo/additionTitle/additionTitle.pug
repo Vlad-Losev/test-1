@@ -1,0 +1,8 @@
+//- style: 'big' | 'medium' | 'medium-2' | 'small' | 'text' | 'small-text' | 'tiny-text'
+//- block: html
+mixin additionTitle(style = 'text')
+    .um-additionTitle(class="um-additionTitle--"+style class!=attributes.class)
+        if block 
+            block 
+        else 
+            | Заголовок

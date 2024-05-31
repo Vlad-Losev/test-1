@@ -1,0 +1,99 @@
+.um-title {
+  font-weight: 500;
+
+  & span {
+      color: var(--primary-color);
+  }
+
+  &--1 {
+      font-size: 77px;
+      line-height: 105%;
+
+      @media (max-width: 1023px) {
+          font-size: 47px;
+          line-height: 105%;
+      }
+      @media (max-width: 767px) {
+          font-size: 37px;
+          line-height: 105%;
+      }
+  }
+//   &--2 {
+//       font-size: 65px;
+//       line-height: 110%;
+
+//       @media (max-width: 1023px) {
+//           font-size: 47px;
+//           line-height: 105%;
+//       }
+//       @media (max-width: 767px) {
+//           font-size: 37px;
+//           line-height: 105%;
+//       }
+//   }
+  &--2 {
+      font-size: 65px;
+      line-height: 68.25px;
+
+      @media (max-width: 1240px) {
+          font-size: 57px;
+          line-height: 59.28px;
+      } 
+      @media (max-width: 630px) {
+          font-size: 43px;
+          line-height: 44.72px; 
+      }
+  }
+  &--3 {
+      font-size: 55px;
+      line-height: 115%;
+
+      @media (max-width: 1023px) {
+          font-size: 43px;
+          line-height: 110%;
+      }
+      @media (max-width: 767px) {
+          font-size: 33px;
+          line-height: 110%;
+      }
+  }
+  &--4 {
+      font-size: 50px;
+      line-height: 120%;
+
+      @media (max-width: 1023px) {
+          font-size: 38px;
+          line-height: 115%;
+      }
+      @media (max-width: 767px) {
+          font-size: 30px;
+          line-height: 115%;
+      }
+  }
+  &--5 {
+      font-size: 35px; 
+      line-height: 125%;
+ 
+      @media (max-width: 1023px) {
+          font-size: 32px;
+          line-height: 115%;
+      }
+      @media (max-width: 767px) {
+          font-size: 25px;
+          line-height: 115%;
+      }
+  }
+  &--6 {
+      font-size: 35px; 
+      line-height: 35.7px;
+ 
+      @media (max-width: 1023px) {
+          font-size: 30px;
+          line-height: 39px ;
+      }
+      @media (max-width: 767px) {
+          font-size: 23px;
+          line-height: 31.05px;
+      }
+  }  
+}

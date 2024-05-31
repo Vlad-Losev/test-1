@@ -1,0 +1,49 @@
+@import "utils/color.scss";
+@import "utils/variables.scss";
+@import "utils/libs";
+@import "utils/fonts";
+
+@import "./common/general.scss";
+@import "./common/um-container.scss";
+@import "./common/um-container-grid.scss";
+@import "./common/um-page.scss";
+
+@import "./common/um-blocks";
+@import "./common/um-upper-layer";
+
+
+// Компоненты
+@import "../components/buttons/btn/btn";
+@import "../components/buttons/roundBtn/roundBtn";
+@import "../components/buttons/playBtn/playBtn";
+
+@import "../components/links/link/link";
+@import "../components/links/arrowLink/arrowLink";
+@import "../components/links/socialLink/socialLink";
+
+@import "../components/fields/input/input";
+@import "../components/fields/search/search";
+@import "../components/fields/file/file";
+
+@import "../components/typo/title/title";
+@import "../components/typo/subtitle/subtitle";
+@import "../components/typo/additionTitle/additionTitle";
+
+@import "../components/other/tag/tag";
+@import "../components/other/citySelect/citySelect";
+@import "../components/other/video/video";
+@import "../components/other/content/content";
+@import "../components/other/block/um-block";
+@import "../components/other/preloader/preloader";
+@import "../components/other/cookie/cookie";
+@import "../components/other/notify/notify";
+@import "../components/other/popup/popup";
+@import "../components/other/btnUp/btnUp";
+
+@import "../components/organisms/header/header";
+@import "../components/organisms/footer/footer";
+@import "../components/organisms/videoPopup/videoPopup";
+
+@import "./common/um-form-popup";
+@import "./common/um-overlay";
+@import "./common/um-seoText";

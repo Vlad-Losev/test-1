@@ -1,0 +1,11 @@
+mixin socials()
+    .um-socials
+        .um-socials__items
+            +socialLink(href="//vk.com" style={background: '#07F', 'border-color': '#07F'})
+                +svg('social-vk')
+            +socialLink(href="//vk.com" style={background: '#28A71A', 'border-color': '#28A71A'})
+                +svg('social-whatsapp')
+            +socialLink(href="//vk.com" style={background: '#27A5E4', 'border-color': '#27A5E4'})
+                +svg('social-telegram')
+            +socialLink('invert')
+                +svg('copy')

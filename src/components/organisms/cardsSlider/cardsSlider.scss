@@ -1,0 +1,79 @@
+.um-cardsSlider {
+  & img {
+    @media (max-width: 1023px) {
+      max-width: 200px;
+    }
+  }
+  &__slider {
+    position: relative;
+  }
+  &__slider:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: calc(-100% - 15px);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,1) 100%);
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+  &__slider:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc(-100% - 15px);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,1) 100%);
+    background: -moz-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,1) 100%);
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    @media (max-width: 1023px) {
+      margin-top: 30px;
+    }
+
+    & > button {
+      position: absolute;
+      top:38.5%;
+      transform:translateY(-50%);
+      z-index: 15;
+
+      &:first-of-type {
+        left: -35px;
+
+        @media (max-width: 1550px) {
+          left: 0;
+        }
+      }
+      &:last-of-type {
+        top:32%;
+        right: -35px;
+        transform: scale(-1);
+
+        @media (max-width: 1550px) {
+          right: 0;
+        }
+      }
+    }
+  }
+  &__btn {
+    margin-top: 30px;
+    width: 100%;
+    .um-btn {
+      width: 100%;
+    }
+  }
+}

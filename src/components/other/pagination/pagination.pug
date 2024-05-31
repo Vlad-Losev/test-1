@@ -1,0 +1,17 @@
+mixin pagination()
+    .um-pagination
+        .um-pagination__content
+            .um-pagination__prev
+                +roundBtn('primary-invert')
+                    +svg('arrow')
+            .um-pagination__pages
+                +link.um-pagination__page 1
+
+                +link.um-pagination__page.isActive 2
+                +link.um-pagination__page 3
+                .um-pagination__page ...
+                +link.um-pagination__page 9
+
+            .um-pagination__next
+                +roundBtn('primary-invert')
+                    +svg('arrow')

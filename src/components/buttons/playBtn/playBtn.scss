@@ -1,0 +1,66 @@
+.um-playBtn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: inherit;
+  line-height: inherit;
+  background: none;
+  color: var(--primary-color);
+  cursor: pointer;
+
+  & span {
+      font-weight: 500;
+  }
+
+  &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid var(--primary-color);
+
+      & svg {
+          width: 14px;
+          height: 14px;
+          fill: var(--primary-color);
+      }
+  }
+
+  &:disabled {
+      pointer-events: none;
+      opacity: .7;
+  }
+
+  &:active {
+      color: var(--primary-dark-color);
+  }
+  &:active &__icon {
+      border-color: var(--primary-dark-color);
+
+      & svg {
+          fill: var(--primary-dark-color);
+      }
+  }
+
+  @media (hover: hover) {
+      
+      &,
+      &__icon,
+      &__icon svg {
+          transition: var(--defaultTransition);
+      }
+
+      &:hover {
+          color: var(--primary-dark-color);
+      }
+      &:hover &__icon {
+          border-color: var(--primary-dark-color);
+  
+          & svg {
+              fill: var(--primary-dark-color);
+          }
+      }
+  }
+}

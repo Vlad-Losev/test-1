@@ -1,0 +1,61 @@
+.um-partnersTrain {
+  display: flex;
+  flex-direction: column;
+  
+  &__row {
+      display: flex;
+      align-items: center;
+
+      & + & {
+          margin-top: -10px;
+      }
+
+      &:nth-child(odd) {
+          animation: trainReverse 20s infinite linear forwards;
+
+          @media(max-width: 1023px) {
+              animation: trainReverse 50s infinite linear forwards;
+          }
+      }
+      &:nth-child(even) {
+          animation: train 20s infinite linear forwards;
+
+          @media(max-width: 1023px) {
+              animation: train 50s infinite linear forwards;
+          }
+      }
+
+      & img {
+          flex-shrink: 0;
+          width: 350px;
+          height: 150px;
+          object-fit: contain;
+
+          @media(max-width: 1023px) {
+              //width: 150px;
+              //height: 70px;
+              width: 190px;
+              height: 85px;
+          }
+      }
+  }
+}
+
+@keyframes train {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  100% {
+      transform: translate(-2100px, 0);
+  }
+}
+@keyframes trainReverse {
+  0% {
+      transform: translate(-2100px, 0);
+  }
+
+  100% {
+      transform: translate(0, 0);
+  }
+}

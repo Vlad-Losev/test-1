@@ -1,0 +1,37 @@
+.um-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-width: 0;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+
+  &::-webkit-scrollbar {
+    opacity: 0;
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  &__item {
+    white-space: nowrap;
+
+    & > span {
+      color: var(--primary-color);
+    }
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 1px;
+    background-color: var(--grey-light-color);
+    flex-shrink: 0;
+  }
+}

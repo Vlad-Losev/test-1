@@ -1,0 +1,87 @@
+.um-link {
+  display: inline-flex;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+
+  @media (max-width: 1023px) {
+
+  }
+
+  &--black {
+      color: var(--basic-color);
+
+      &:active,
+      &.isActive {
+          color: var(--primary-color);
+
+          & svg {
+              fill: var(--primary-color);
+          }
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              color: var(--primary-color);
+
+              & svg {
+                  fill: var(--primary-color);
+              }
+          }
+      }
+  }
+  &--primary {
+      color: var(--primary-color);
+
+      &:active,
+      &.isActive {
+          color: var(--basic-color);
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              color: var(--basic-color);
+          }
+      }
+  }
+  &--grey {
+      color: var(--grey-color);
+
+      &:active,
+      &.isActive {
+          color: var(--basic-color);
+      }
+
+      @media (hover: hover) {
+          
+          &:hover {
+              color: var(--basic-color);
+          }
+      }
+  }
+  &--white {
+      color: var(--white-color);
+
+      &:active,
+      &.isActive {
+          opacity: 0.5;
+      }
+
+      @media (hover: hover) {
+
+          &:hover {
+              opacity: 0.5;
+          }
+      }
+  }
+
+  @media (hover: hover) {
+      
+      &,
+      & svg {
+          transition: var(--defaultTransition);
+      }
+  }
+}

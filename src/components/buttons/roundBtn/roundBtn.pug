@@ -1,0 +1,15 @@
+//- block: svg | img
+//- style: 'primary' | 'primary-invert' | 'transparent-primary' | 'white'
+//- size: 'l' | 'm' | 's'
+mixin roundBtn(style = 'primary', size = 'm')
+    button(
+        class='um-roundBtn' 
+        class!='um-roundBtn--'+style 
+        class!='um-roundBtn--'+size 
+        class!=attributes.class 
+        onclick!=attributes.onclick 
+        disabled!=attributes.disabled)&attributes(attributes)
+        if block
+            block
+        else
+            +svg('arrow')

@@ -1,0 +1,6 @@
+mixin textarea(label="Поле")
+    .um-input.js-input(class!=attributes.class)
+        .um-input__input
+            .um-input__label=label
+            textarea(type="text" name!=attributes.name value!=attributes.value rows=3).js-input__input
+        .um-input__error.js-input__error Текст ошибки

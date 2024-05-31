@@ -1,0 +1,10 @@
+mixin partnersTrain
+    .um-partnersTrain
+        - for(var i = 0; i < 2; ++i) {
+            .um-partnersTrain__row
+                - for(var k = 0; k < 3; ++k) {
+                    - for(var j = 1; j <= 6; ++j) {
+                        img(src="/img/organisms/partnersTrain/logo"+j+".svg", alt="Партнер" loading="lazy")
+                    - }
+                - }
+        - }

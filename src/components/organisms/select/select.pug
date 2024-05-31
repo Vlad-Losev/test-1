@@ -1,0 +1,20 @@
+mixin select()
+    .um-select__navs.js-select.isError
+        input(type="hidden").js-select__input
+        .um-select__select.js-select__open
+            .um-select__nav.js-select__label Пункт
+            .um-select__select-arrow
+                +svg('arrow-s')
+        .um-select__nav-items.js-select__window
+            label.um-select__nav-item.isSelected.js-select__option(data-label="Пункт")
+                input(type="radio" name="sort" value="all")
+                .um-select__select-nav Пункт
+            label.um-select__nav-item.js-select__option(data-label="Пункт")
+                input(type="radio" name="sort" value="all")
+                .um-select__select-nav Пункт
+            label.um-select__nav-item.js-select__option(data-label="Пункт")
+                input(type="radio" name="sort" value="all")
+                .um-select__select-nav Пункт
+            label.um-select__nav-item.js-select__option(data-label="Пункт")
+                input(type="radio" name="sort" value="all")
+                .um-select__select-nav Пункт

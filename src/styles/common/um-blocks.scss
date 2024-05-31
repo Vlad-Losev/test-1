@@ -1,0 +1,31 @@
+.um-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+
+  @media (max-width: 1023px) {
+      gap: 40px;
+  }
+  @media (max-width: 767px) {
+
+  }
+
+  &--first {
+      margin-top: 40px;
+
+      @media (max-width: 1023px) {
+          margin-top: 25px;
+      }
+  }
+
+  & + & {
+      margin-top: 100px;
+
+      @media (max-width: 1023px) {
+          margin-top: 40px;
+      }
+      @media (max-width: 767px) {
+
+      }
+  }
+}

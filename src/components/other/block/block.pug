@@ -1,0 +1,16 @@
+mixin block(title = 'Заголовок', link, linkLabel, desc)
+    .um-block(class!=attributes.class)
+        .um-block__heading
+            .um-block__top
+                +title('4')=title
+                if link
+                    +arrowLink('next')(href!=link).isHiddenMob=linkLabel
+            if desc
+                span=desc
+        if block
+            block
+            //if link
+            //    .um-block__btn-bottom.isHiddenTab.isHiddenDesc
+            //        +btn('transparent-primary')=linkLabel
+        else
+            | Контент блока

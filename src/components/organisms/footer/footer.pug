@@ -1,0 +1,37 @@
+mixin footer
+    footer.um-footer
+        .um-footer__top
+            .um-footer__grid.um-container
+                a(href="/").um-footer__logo.isHiddenTab.isHiddenMob
+                    img(src="/img/logo.svg")
+
+                .um-footer__nav
+                    .um-footer__nav-col
+                        .um-footer__nav-section
+                            +link()(href="/engineer/") Пункт
+                            +link(href="/services/") Подпункт
+                            +link(href="/portfolio/") Подпункт
+                    .um-footer__nav-col
+                        .um-footer__nav-section
+                            +link()(href="/maintenance/") Пункт
+                            +link(href="/services/") Подпункт
+                            +link(href="/portfolio/") Подпункт
+                .um-footer__right
+                    .um-footer__contacts 
+                        +link(href="tel:+7 (7777) 77-77-77")
+                            +subtitle('2') +7 (7777) 77-77-77"
+                        +link('primary')(href="mailto:mailt@mailt.ru") mailt@mailt.ru
+
+        .um-footer__bottom.um-container
+            .um-footer__bottom-left 
+                span © 2020 — 2023
+                +link('grey')(href="/privacy/") Политика конфиденциальности
+
+                div This site is protected by reCAPTCHA and the Google
+                    +link('grey') Privacy Policy
+                    |  and
+                    +link('grey') Terms of Service
+                    |  apply
+            .um-footer__bottom-right 
+                span Сделано в 
+                    +link(href="https://uralmedias.ru" target="_blank" rel="nofollow") Uralmedias

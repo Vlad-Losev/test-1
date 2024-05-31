@@ -1,0 +1,10 @@
+mixin search()
+    form.um-search.js-search(class!=attributes.class)
+        button(type="submit").um-search__submit.isHiddenMob
+            +svg('search')
+        input(type="text" placeholder="Найти на сайте")
+        button(type="reset").um-search__clear.js-search__clear.isHiddenMob
+            +svg('close')
+        button(type="button").um-search__close.js-closeSearch.isHiddenDesc.isHiddenTab
+            +svg('close')
+        +btn(class="um-search__big-submit isHiddenDesc isHiddenTab") Найти
